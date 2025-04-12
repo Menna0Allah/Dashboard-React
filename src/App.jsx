@@ -36,11 +36,11 @@ function App() {
 
           {activeMenu ? (
             <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
-              SideBar 
+              <Sidebar /> 
             </div>
-          ): (
+          ) : (
             <div className='w-0 overflow-hidden dark:bg-secondary-dark-bg'>
-              SideBar
+              <Sidebar /> 
             </div>
           )}
 
@@ -51,7 +51,7 @@ function App() {
           }>
 
             <div className='text-red-700 fixed md-static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
-              Navbar
+              <Navbar />
             </div>
 
           </div>
