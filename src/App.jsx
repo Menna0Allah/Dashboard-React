@@ -8,10 +8,11 @@ import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 import './App.css'
 
 import { useState } from 'react';
+import { useStateContext } from './contexts/contextProvider';
 
 function App() {
 
-  const [activeMenu, setActiveMenu] = useState(false);
+  const activeMenu = useStateContext();
 
   return (
     <div>
