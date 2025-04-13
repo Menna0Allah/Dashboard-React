@@ -12,7 +12,7 @@ import { useStateContext } from './contexts/contextProvider';
 
 function App() {
 
-  const activeMenu = useStateContext();
+  const {activeMenu} = useStateContext();
 
   return (
     <div>
@@ -40,7 +40,7 @@ function App() {
               <Sidebar /> 
             </div>
           ) : (
-            <div className='w-0 overflow-hidden dark:bg-secondary-dark-bg'>
+            <div className='w-0 dark:bg-secondary-dark-bg'>
               <Sidebar /> 
             </div>
           )}
@@ -51,7 +51,7 @@ function App() {
             ${activeMenu ? 'md:ml-72' : ' flex-2'}`
           }>
 
-            <div className='text-red-700 fixed md-static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
+            <div className='fixed md-static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
               <Navbar />
             </div>
 
