@@ -55,7 +55,6 @@ function App() {
               <Navbar />
             </div>
 
-          </div>
 
           {/* routes */}
 
@@ -88,7 +87,7 @@ function App() {
 
             </Routes>
           </div>
-
+          </div>
         </div>
       </BrowserRouter>
     </div>
