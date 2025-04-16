@@ -871,12 +871,12 @@ export const userProfileData = [
 ];
 
 export const ordersGrid = [
-  {
-    headerText: 'Image',
-    template: gridOrderImage,
-    textAlign: 'Center',
-    width: '120',
-  },
+  // {
+  //   headerText: 'Image',
+  //   template: gridOrderImage,
+  //   textAlign: 'Center',
+  //   width: '120',
+  // },
   {
     field: 'OrderItems',
     headerText: 'Item',
@@ -897,13 +897,13 @@ export const ordersGrid = [
     editType: 'numericedit',
     width: '150',
   },
-  {
-    headerText: 'Status',
-    template: gridOrderStatus,
-    field: 'OrderItems',
-    textAlign: 'Center',
-    width: '120',
-  },
+  // {
+  //   headerText: 'Status',
+  //   template: gridOrderStatus,
+  //   field: 'OrderItems',
+  //   textAlign: 'Center',
+  //   width: '120',
+  // },
   {
     field: 'OrderID',
     headerText: 'Order ID',
