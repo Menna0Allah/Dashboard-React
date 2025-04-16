@@ -434,10 +434,10 @@ export const customersGrid = [
 ];
 
 export const employeesGrid = [
-  { headerText: 'Employee',
-    width: '150',
-    template: gridEmployeeProfile,
-    textAlign: 'Center' },
+  // { headerText: 'Employee',
+  //   width: '150',
+  //   template: gridEmployeeProfile,
+  //   textAlign: 'Center' },
   { field: 'Name',
     headerText: '',
     width: '0',
@@ -448,10 +448,10 @@ export const employeesGrid = [
     width: '170',
     textAlign: 'Center',
   },
-  { headerText: 'Country',
-    width: '120',
-    textAlign: 'Center',
-    template: gridEmployeeCountry },
+  // { headerText: 'Country',
+  //   width: '120',
+  //   textAlign: 'Center',
+  //   template: gridEmployeeCountry },
 
   { field: 'HireDate',
     headerText: 'Hire Date',
