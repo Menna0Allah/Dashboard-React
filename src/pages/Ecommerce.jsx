@@ -4,9 +4,11 @@ import { GiBoatPropeller } from 'react-icons/gi'
 import { GoDotFill } from "react-icons/go";
 import { Stacked, Pie, Button, SparkLine } from '../components';
 import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
-import { useStateContext } from '../contexts/contextProvider';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const Ecommerce = () => {
+  const { currentColor } = useStateContext();
+
   return (
     // container that hold all the page
     <div className='mt-12'>
@@ -24,7 +26,7 @@ const Ecommerce = () => {
           </div>
 
         <div className="mt-6">
-          <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />
+          <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="md" />
         </div>
 
         </div>
@@ -86,19 +88,19 @@ const Ecommerce = () => {
                 </div>
                 <div className="mt-5">
                   <SparkLine 
-                    currentColor="blue"
+                    currentColor={currentColor}
                     id="line-sparkLine"
                     type="Line"
                     height="80px"
                     width="250px"
                     data={SparklineAreaData}
-                    color="blue"
+                    color={currentColor}
                   />
                 </div>
                 <div className="mt-10">
                   <Button 
                     color="white"
-                    bgColor="blue"
+                    bgColor={currentColor}
                     text="Download Report"
                     borderRadius="10px"
                   />

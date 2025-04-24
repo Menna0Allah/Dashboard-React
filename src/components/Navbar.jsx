@@ -8,7 +8,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import avatar from '../data/avatar.jpg'
 import {Cart, Chat, Notification, UserProfile} from '.';
-import { useStateContext } from '../contexts/contextProvider';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({title, customFunc, icon, color, dotColor}) => (
   <TooltipComponent content={title}>
@@ -20,7 +20,7 @@ const NavButton = ({title, customFunc, icon, color, dotColor}) => (
 )
 
 const Navbar = () => {
-  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setscreenSize } = useStateContext();
+  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setscreenSize, currentColor } = useStateContext();
 
   useEffect(() => {
     const handleResize = () => setscreenSize(window.innerWidth);
@@ -43,14 +43,14 @@ const Navbar = () => {
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
 
-      <NavButton title="Menu" customFunc={() => setActiveMenu((preActiveMenu) => !preActiveMenu)} color="blue" icon={<AiOutlineMenu />}/>
+      <NavButton title="Menu" customFunc={() => setActiveMenu((preActiveMenu) => !preActiveMenu)} color={currentColor} icon={<AiOutlineMenu />}/>
 
       <div className='flex'>
-        <NavButton title="Cart" customFunc={() => handleClick("cart")} color="blue" icon={<FiShoppingCart />}/>
+        <NavButton title="Cart" customFunc={() => handleClick("cart")} color={currentColor} icon={<FiShoppingCart />}/>
 
-        <NavButton title="Chat" dotColor='#03C9D7' customFunc={() => handleClick("chat")} color="blue" icon={<BsChatLeft />}/>
+        <NavButton title="Chat" dotColor='#03C9D7' customFunc={() => handleClick("chat")} color={currentColor} icon={<BsChatLeft />}/>
 
-        <NavButton title="Notifications" dotColor='#03C9D7' customFunc={() => handleClick("notification")} color="blue" icon={<RiNotification3Line />}/>
+        <NavButton title="Notifications" dotColor='#03C9D7' customFunc={() => handleClick("notification")} color={currentColor} icon={<RiNotification3Line />}/>
 
         <TooltipComponent content="Profile" position='BottomCenter'>
           <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={() => handleClick('userProfile')}>
