@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
-import { ContextProvider } from './contexts/contextProvider'
+import { ContextProvider } from './contexts/ContextProvider'
 
 // For React specific packages
 import { registerLicense } from '@syncfusion/ej2-base';
